@@ -21,3 +21,6 @@ Completed user stories:
     - [] <b>Optional:</b> User can see a counter with total number of characters left for tweet
 
 - [X] <b>Optional:</b> User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
+
+3.![Video Walkthrough](simpletwitter.gif)
+
