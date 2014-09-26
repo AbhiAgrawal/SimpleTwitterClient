@@ -1,5 +1,6 @@
 package com.yahoo.abhisheka.basictwitter.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,25 +8,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.activeandroid.Model;
-import com.activeandroid.annotation.Column;
-import com.activeandroid.annotation.Column.ForeignKeyAction;
-import com.activeandroid.annotation.Table;
-import com.activeandroid.query.Select;
+public class Tweet implements Serializable {
 
-@Table(name = "Tweets")
-public class Tweet extends Model {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5773670155424508538L;
 
-	@Column(name = "Body")
 	public String body;
 
-	@Column(name = "tweet_id", unique = true, onUniqueConflict = Column.ConflictAction.REPLACE)
 	public long tweetId;
 
-	@Column(name = "Created_At")
 	public String createdAt;
 
-	@Column(name = "User", onUpdate = ForeignKeyAction.CASCADE, onDelete = ForeignKeyAction.CASCADE)
 	public User user;
 
 	public String getBody() {
@@ -90,13 +85,6 @@ public class Tweet extends Model {
 	public String toString() {
 		return "Tweet [body=" + body + ", id=" + tweetId + ", createdAt="
 				+ createdAt + ", user=" + user + "]";
-	}
-
-	public static List<Tweet> getAllTweets() {
-		List<Tweet> tweets = new ArrayList<Tweet>();
-		List<Tweet> tableTweet = new Select().from(Tweet.class).execute();
-		tweets.addAll(tableTweet);
-		return tweets;
 	}
 
 }

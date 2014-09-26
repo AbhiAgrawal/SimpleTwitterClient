@@ -7,8 +7,8 @@ import android.content.Context;
 
 import com.codepath.oauth.OAuthBaseClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.yahoo.abhisheka.basictwitter.util.ACTION;
 
 /*
  * 
@@ -66,8 +66,7 @@ public class TwitterClient extends OAuthBaseClient {
 	 * i.e client.post(apiUrl, params, handler);
 	 */
 
-	public void getHomeClient(AsyncHttpResponseHandler handler, long maxId,
-			long sinceId, ACTION action) {
+	public void getHomeClient(AsyncHttpResponseHandler handler, long maxId) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		RequestParams params = new RequestParams();
 		params.put("count", "20");
@@ -86,4 +85,38 @@ public class TwitterClient extends OAuthBaseClient {
 		client.post(apiUrl, params, handler);
 
 	}
+
+	public void getMentionsTimeline(JsonHttpResponseHandler handler, long maxId) {
+		String apiUrl = getApiUrl("statuses/mentions_timeline.json");
+		RequestParams params = new RequestParams();
+		params.put("count", "20");
+		if (maxId != -1) {
+			params.put("max_id", String.valueOf(maxId));
+		}
+		client.get(apiUrl, null, handler);
+
+	}
+
+	public void getUserInfo(JsonHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("account/verify_credentials.json");
+		RequestParams params = null;
+		client.get(apiUrl, params, handler);
+
+	}
+
+	public void getUserTimeline(JsonHttpResponseHandler handler, long userId,
+			long maxId) {
+		String apiUrl = getApiUrl("statuses/user_timeline.json");
+		RequestParams params = null;
+		if (userId != -1) {
+			params = new RequestParams();
+			params.put("user_id", String.valueOf(userId));
+		}
+		if (maxId != -1 && params != null) {
+			params.put("max_id", String.valueOf(maxId));
+		}
+		client.get(apiUrl, params, handler);
+
+	}
+
 }

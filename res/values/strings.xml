@@ -15,5 +15,7 @@
     <string name="save">Save</string>
     <string name="screenName">\@screen_name</string>
     <string name="relative_ts">relative_ts</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>
