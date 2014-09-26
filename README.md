@@ -1,7 +1,7 @@
 Simle Twitter CLient
 
 
-Time spent: 7 hours spent in total
+PART 1 Time spent: 7 hours spent in total
 
 Completed user stories:
 - [X] User can sign in using OAuth login flow
@@ -21,6 +21,27 @@ Completed user stories:
     - [] <b>Optional:</b> User can see a counter with total number of characters left for tweet
 
 - [X] <b>Optional:</b> User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
+- 
+
+PART 2 Time spent 7 hrs
+
+Includes all required user stories from Week 3 Twitter Client
+User can switch between Timeline and Mention views using tabs.
+
+    User can view their home timeline tweets.
+    User can view the recent mentions of their username.
+    User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")
+    
+
+User can navigate to view their own profile
+
+    User can see picture, tagline, # of followers, # of following, and tweets on their profile.
+
+User can click on the profile image in any tweet to see another user's profile.
+
+    User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
+    Profile view should include that user's timeline
 
 3.![Video Walkthrough](simpletwitter.gif)
+4.![Video Walkthrough](simpletwitter2.gif)
 
