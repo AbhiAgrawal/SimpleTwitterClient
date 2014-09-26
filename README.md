@@ -21,11 +21,14 @@ Completed user stories:
     - [] <b>Optional:</b> User can see a counter with total number of characters left for tweet
 
 - [X] <b>Optional:</b> User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
-- 
+
+
+-----------------------------------------------
 
 PART 2 Time spent 7 hrs
 
 Includes all required user stories from Week 3 Twitter Client
+
 User can switch between Timeline and Mention views using tabs.
 
     User can view their home timeline tweets.
@@ -41,7 +44,9 @@ User can click on the profile image in any tweet to see another user's profile.
 
     User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
     Profile view should include that user's timeline
-
+Part 1 
 3.![Video Walkthrough](simpletwitter.gif)
+
+Part 2
 4.![Video Walkthrough](simpletwitter2.gif)
 
